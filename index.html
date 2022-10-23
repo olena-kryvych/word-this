@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>слово THIS</title>
+</head>
+
+<body>
+    <script>
+        var calculator = {
+            sum: function () {
+                return this.a + this.b;
+            },
+
+            mul: function () {
+                return this.a * this.b;
+            },
+
+            readValues: function () {
+                this.a = +prompt("Введіть число a:", "");
+                this.b = +prompt("Введіть число b:", "");
+            }
+        }
+
+        calculator.readValues();
+        alert("Сума =  "+ calculator.sum());
+        alert("Добуток =  " + calculator.mul());
+    </script>
+</body>
+
+</html>
